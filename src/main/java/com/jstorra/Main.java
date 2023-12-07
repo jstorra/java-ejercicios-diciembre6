@@ -77,7 +77,7 @@ public class Main {
                     if (cantidadRetiro > saldo) {
                         System.out.println("\nMENSAJE: El retiro excede el saldo disponible.");
                     } else {
-                        int count50 = 0, count20 = 0, count10 = 0;
+                        int count50 = 0, count20 = 0, count10 = 0, suma = 0;
                         double copiaCantidadRetiro = cantidadRetiro;
                         if (cantidadRetiro < billetes[2]) {
                             System.out.println("\nMENSAJE: No se puede retirar la cantidad solicitada.");
@@ -100,7 +100,8 @@ public class Main {
                                         break;
                                     }
                                     cantidadRetiro -= billete;
-                                    saldo = cantidadRetiro;
+                                    suma += billete;
+                                    saldo -= suma;
                                 }
                             }
                             System.out.println("\n--------------- DETALLES ---------------");
@@ -112,7 +113,7 @@ public class Main {
                             System.out.println("Restantes billetes $20.000: " + cantidad[1]);
                             System.out.println("Restantes billetes $10.000: " + cantidad[2]);
 
-                            System.out.println("\nCantidad retirada: $" + copiaCantidadRetiro);
+                            System.out.println("\nCantidad retirada: $" + suma);
                             System.out.println("Saldo restante: $" + saldo);
                             System.out.println("----------------------------------------");
                         }
