@@ -78,7 +78,6 @@ public class Main {
                         System.out.println("\nMENSAJE: El retiro excede el saldo disponible.");
                     } else {
                         int count50 = 0, count20 = 0, count10 = 0, suma = 0;
-                        double copiaCantidadRetiro = cantidadRetiro;
                         if (cantidadRetiro < billetes[2]) {
                             System.out.println("\nMENSAJE: No se puede retirar la cantidad solicitada.");
                         } else {
